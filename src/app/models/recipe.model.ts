@@ -1,5 +1,5 @@
 export class Recipe {
-    // id: any;
+    id: any;
     name: String;
     description: String;
     dietary: String;

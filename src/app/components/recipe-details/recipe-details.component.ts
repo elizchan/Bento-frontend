@@ -10,6 +10,7 @@ import { Recipe } from 'src/app/models/recipe.model';
 })
 export class RecipeDetailsComponent implements OnInit {
   currentRecipe: Recipe = {
+    id: '',
     name: '',
     description: '',
     dietary: ''
@@ -56,7 +57,7 @@ export class RecipeDetailsComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response)
-          this.route.navigate(['/tutorials']);
+          this.router.navigate(['/recipes']);
         },
         error => {
           console.log(error)

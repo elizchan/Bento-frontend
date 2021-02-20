@@ -1,6 +1,8 @@
-<!-- <h2>Name of dish:</h2> -->
+
 <div>
-    <div *ngIf="currentTutorial.id" class="edit-form">
+  <h2>Name of dish:</h2>
+  
+    <div *ngIf="currentRecipe.id" class="edit-form">
       <h4>Tutorial</h4>
       <form>
         <div class="form-group">
@@ -48,7 +50,7 @@
         Update
       </button>
       <p>{{ message }}</p>
-    </div>
+    </div> 
   
     <div *ngIf="!currentRecipe.id">
       <br />

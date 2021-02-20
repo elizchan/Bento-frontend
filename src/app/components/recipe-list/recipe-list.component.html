@@ -1,22 +1,33 @@
-<h2>Available Recipes</h2>
+
 
 <div class="col-md-6">
-    <div *ngIf="currentRecipe">
-      <h4>Recipe</h4>
-      <div>
-        <label><strong>Name:</strong></label> {{ currentRecipe.name }}
-      </div>
-      <div>
-        <label><strong>Description:</strong></label>
-        {{ currentRecipe.description }}
-      </div>
-      <div>
-        <label><strong>Dietary:</strong></label>
-        {{ currentRecipe.dietary }}
-      </div>
-
-      <a class="badge badge-warning" routerLink="/recipes/{{ currentRecipe.id }}">
-        Edit
-      </a>
+    <h2>Available Recipes</h2>
+    <div class="col-md-6">
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            *ngFor="let recipe of recipes; let i = index"
+            [class.active]="i == currentIndex"
+            (click)="setActiveRecipe(recipe, i)"
+          >
+            <div *ngIf="recipe">
+                <div>
+                  <label><strong>Name:</strong></label> {{ recipe.name }}
+                </div>
+                <div>
+                  <label><strong>Description:</strong></label>
+                  {{ recipe.description }}
+                </div>
+                <div>
+                  <label><strong>Dietary:</strong></label>
+                  {{ recipe.dietary }}
+                </div>
+          
+                <a class="badge badge-warning" routerLink="/recipes/{{ recipe.id }}">
+                  Edit
+                </a>
+              </div>
+          </li>
+        </ul>
     </div>
 </div>

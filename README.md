@@ -30,7 +30,8 @@ Simple Bento allows users to order 4 or 8 meal packages from a menu that rotates
 ## Technology
 * Angular.js
 * CSS
-## Backend Repository
+## Backend Repository Link
+https://github.com/elizchan/Simple-Bento-backend
 ## Set Up
 * fork and clone repo
 * npm i
@@ -49,6 +50,7 @@ Simple Bento allows users to order 4 or 8 meal packages from a menu that rotates
 
 ## Challenges
 * Learning how to use Angular
+* Making the wireframes
 
 ## Future Goals
 * Finish building this to be a complete site for a friend by allowing full admin functionality on top of users

@@ -7,8 +7,8 @@ import { RecipeListComponent } from './components/recipe-list/recipe-list.compon
 const routes: Routes = [
   { path: '', redirectTo: 'recipes', pathMatch: 'full' },
   { path: 'recipes', component: RecipeListComponent },
-  { path: 'recipes/:id', component: RecipeDetailsComponent },
-  { path: 'recipes/add', component: AddRecipeComponent}
+  { path: 'recipes/add', component: AddRecipeComponent},
+  { path: 'recipes/:id', component: RecipeDetailsComponent }
 ];
 
 @NgModule({

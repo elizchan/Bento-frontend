@@ -9,6 +9,7 @@ import { RecipeService } from 'src/app/services/recipe.service'
 })
 export class AddRecipeComponent implements OnInit {
   recipe: Recipe = {
+    id: '',
     name: '',
     description: '',
     dietary: ''
@@ -40,6 +41,7 @@ export class AddRecipeComponent implements OnInit {
   newRecipe(): void {
     this.submitted = false;
     this.recipe = {
+      id: '',
       name: '',
       description: '',
       dietary: ''
