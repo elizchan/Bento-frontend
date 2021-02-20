@@ -40,17 +40,21 @@ https://github.com/elizchan/Simple-Bento-backend
 * As an admin I should be ablet to create, view, update, and delete recipes
 ## Creation Process
 * Researched what front-end framework to use and decided on Angular.js
-* Developed user stories and wireframes
+* Developed user stories for admin and wireframes
 * Created RESTful routes in the backend
 * Developed Angular components to connect to database models
 #### ERD
 <img src="https://i.ibb.co/jv51f7p/ERD-for-proj4.jpg" alt="ERD-for-proj4" border="0">
 
 ### Wireframes
+<img src="https://i.ibb.co/2vtg9rL/150131706-993946177797558-1638474133923877383-n.jpg" alt="150131706-993946177797558-1638474133923877383-n" border="0">
+<img src="https://i.ibb.co/G38mvJy/151790106-164606062143667-5357132317831016260-n.jpg" alt="151790106-164606062143667-5357132317831016260-n" border="0">
+<img src="https://i.ibb.co/wBbS1DR/152388272-135278411791844-6120834151234352263-n.jpg" alt="152388272-135278411791844-6120834151234352263-n" border="0">
 
 ## Challenges
 * Learning how to use Angular
 * Making the wireframes
+* Figuring out how to separate admin from user, decided to go with admin routes first
 
 ## Future Goals
 * Finish building this to be a complete site for a friend by allowing full admin functionality on top of users

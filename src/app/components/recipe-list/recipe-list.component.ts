@@ -36,4 +36,10 @@ export class RecipeListComponent implements OnInit {
     this.currentIndex = -1;
   }
 
+  setActiveRecipe(recipe: Recipe, index: number): void {
+    this.currentRecipe = recipe;
+    this.currentIndex = index;
+  }
+
+
 }
