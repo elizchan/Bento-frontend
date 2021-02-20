@@ -9,6 +9,7 @@ import { Recipe } from 'src/app/models/recipe.model';
   styleUrls: ['./recipe-details.component.css']
 })
 export class RecipeDetailsComponent implements OnInit {
+  recipeName = "";
   currentRecipe: Recipe = {
     id: '',
     name: '',
@@ -25,13 +26,16 @@ export class RecipeDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.message = '';
     this.getRecipe(this.route.snapshot.params.id)
+    console.log(this.route.snapshot.params.id)
   }
 
   getRecipe(id: string): void {
+    console.log(id)
     this.recipeService.get(id)
       .subscribe(
         data => {
           this.currentRecipe = data;
+          this.recipeName = data.name;
           console.log(data)
         },
         error => {
@@ -39,12 +43,13 @@ export class RecipeDetailsComponent implements OnInit {
         }
       )
   }
-  updateRecipe(): void {
-    this.recipeService.update(this.currentRecipe.id, this.currentRecipe)
+  updateRecipe(id: string): void {
+    this.recipeService.update(id, this.currentRecipe)
       .subscribe(
         response => {
-          console.log(response)
-          this.message = response.message
+          // console.log(response.message)
+          // this.message = response.message
+          this.router.navigate(['/recipes']);
         },
         error => {
           console.log(error)
@@ -52,8 +57,10 @@ export class RecipeDetailsComponent implements OnInit {
       )
   }
 
-  deleteRecipe(): void {
-    this.recipeService.delete(this.currentRecipe.id)
+  deleteRecipe(id: string): void {
+    console.log("we are in the delete")
+    console.log(id)
+    this.recipeService.delete(id)
       .subscribe(
         response => {
           console.log(response)

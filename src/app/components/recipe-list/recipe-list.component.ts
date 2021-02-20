@@ -37,6 +37,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   setActiveRecipe(recipe: Recipe, index: number): void {
+    console.log(recipe)
     this.currentRecipe = recipe;
     this.currentIndex = index;
   }

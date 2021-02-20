@@ -8,9 +8,7 @@
             class="list-group-item"
             *ngFor="let recipe of recipes; let i = index"
             [class.active]="i == currentIndex"
-            (click)="setActiveRecipe(recipe, i)"
           >
-            <div *ngIf="recipe">
                 <div>
                   <label><strong>Name:</strong></label> {{ recipe.name }}
                 </div>
@@ -23,10 +21,10 @@
                   {{ recipe.dietary }}
                 </div>
           
-                <a class="badge badge-warning" routerLink="/recipes/{{ recipe.id }}">
+                <a class="badge badge-warning" routerLink="{{'/recipes/'+recipe._id}}">
                   Edit
                 </a>
-              </div>
+              
           </li>
         </ul>
     </div>

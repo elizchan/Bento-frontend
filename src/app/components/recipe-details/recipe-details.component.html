@@ -1,7 +1,7 @@
 
 <div>
-  <h2>Name of dish:</h2>
-    <div *ngIf="currentRecipe.id" class="edit-form">
+    <div *ngIf="currentRecipe" class="edit-form">
+      <h2>Name of dish:{{ recipeName }}</h2>
       <h4>Recipe</h4>
       <form>
         <div class="form-group">
@@ -37,21 +37,21 @@
         </div>
       </form>
   
-      <button class="badge badge-danger mr-2" (click)="deleteRecipe()">
+      <button class="badge badge-danger mr-2" (click)="deleteRecipe(currentRecipe._id)">
         Delete
       </button>
   
       <button
         type="submit"
         class="badge badge-success mb-2"
-        (click)="updateRecipe()"
+        (click)="updateRecipe(currentRecipe._id)"
       >
         Update
       </button>
-      <p>{{ message }}</p>
+      <!-- <p>{{ message }}</p> -->
     </div> 
   
-    <div *ngIf="!currentRecipe.id">
+    <div *ngIf="!currentRecipe">
       <br />
       <p>Cannot access this Recipe...</p>
     </div>
