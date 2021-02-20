@@ -1,5 +1,5 @@
-# Frontend
-
+# Bento
+<!-- 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
 ## Development server
@@ -24,7 +24,25 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page. -->
+## Introduction
+Simple Bento allows users to order 4 or 8 meal packages from a menu that rotates every 2 weeks
+## Technology
+* Angular.js
+* CSS
+## Backend Repository
+## Set Up
+* fork and clone repo
+* npm i
+## User Stories
+* As an admin I should be able to create, update and delete a menu
+* As an admin I should be ablet to create, view, update, and delete recipes
+## Creation Process
+* Researched what front-end framework to use and decided on Angular.js
+* Developed user stories and wireframes
+* Created RESTful routes in the backend
+* Developed Angular components to connect to database models
+#### ERD
+<img src="https://i.ibb.co/jv51f7p/ERD-for-proj4.jpg" alt="ERD-for-proj4" border="0">
 
-## ERD
-<a href="https://ibb.co/QFc1Qs5"><img src="https://i.ibb.co/jv51f7p/ERD-for-proj4.jpg" alt="ERD-for-proj4" border="0"></a>
+### wireframes
