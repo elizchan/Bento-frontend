@@ -45,4 +45,11 @@ Simple Bento allows users to order 4 or 8 meal packages from a menu that rotates
 #### ERD
 <img src="https://i.ibb.co/jv51f7p/ERD-for-proj4.jpg" alt="ERD-for-proj4" border="0">
 
-### wireframes
+### Wireframes
+
+## Challenges
+* Learning how to use Angular
+
+## Future Goals
+* Finish building this to be a complete site for a friend by allowing full admin functionality on top of users
+* allowing admin to upload picture of food to store into database
