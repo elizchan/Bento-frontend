@@ -1,0 +1,58 @@
+<!-- <h2>Name of dish:</h2> -->
+<div>
+    <div *ngIf="currentTutorial.id" class="edit-form">
+      <h4>Tutorial</h4>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            [(ngModel)]="currentRecipe.name"
+            name="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            [(ngModel)]="currentRecipe.description"
+            name="description"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label><strong>Dietary:</strong></label>
+          <input
+            type="text"
+            class="form-control"
+            id="dietary"
+            [(ngModel)]="currentRecipe.dietary"
+            name="dietary"
+          />
+        </div>
+      </form>
+  
+      <button class="badge badge-danger mr-2" (click)="deleteRecipe()">
+        Delete
+      </button>
+  
+      <button
+        type="submit"
+        class="badge badge-success mb-2"
+        (click)="updateRecipe()"
+      >
+        Update
+      </button>
+      <p>{{ message }}</p>
+    </div>
+  
+    <div *ngIf="!currentRecipe.id">
+      <br />
+      <p>Cannot access this Recipe...</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,22 @@
+<h2>Available Recipes</h2>
+
+<div class="col-md-6">
+    <div *ngIf="currentRecipe">
+      <h4>Recipe</h4>
+      <div>
+        <label><strong>Name:</strong></label> {{ currentRecipe.name }}
+      </div>
+      <div>
+        <label><strong>Description:</strong></label>
+        {{ currentRecipe.description }}
+      </div>
+      <div>
+        <label><strong>Dietary:</strong></label>
+        {{ currentRecipe.dietary }}
+      </div>
+
+      <a class="badge badge-warning" routerLink="/recipes/{{ currentRecipe.id }}">
+        Edit
+      </a>
+    </div>
+</div>

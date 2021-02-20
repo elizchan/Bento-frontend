@@ -1,0 +1,48 @@
+<h2>Submit a Recipe!</h2>
+
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="name">Name of dish</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            required
+            [(ngModel)]="recipe.name"
+            name="name"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            class="form-control"
+            id="description"
+            required
+            [(ngModel)]="recipe.description"
+            name="description"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="dietary">Dietary</label>
+          <input
+            class="form-control"
+            id="dietary"
+            required
+            [(ngModel)]="recipe.dietary"
+            name="dietary"
+          />
+        </div>
+  
+        <button (click)="saveRecipe()" class="btn btn-success">Submit</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>Recipe was submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newRecipe()">Add</button>
+      </div>
+    </div>
+</div>
