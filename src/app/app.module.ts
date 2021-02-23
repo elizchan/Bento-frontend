@@ -16,8 +16,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardUserComponent } from './board-user/board-user.component';
 
-import { authInterceptorProviders } from './_helpers/auth.interceptor';
-import { Auth } from './_helpers/auth.interceptor/auth.interceptor.component';
+import { authInterceptorProviders } from './_helpers/auth.interceptor'
+
 
 @NgModule({
   declarations: [
@@ -32,7 +32,6 @@ import { Auth } from './_helpers/auth.interceptor/auth.interceptor.component';
     ProfileComponent,
     BoardAdminComponent,
     BoardUserComponent,
-    Auth.InterceptorComponent
   ],
   imports: [
     BrowserModule,
